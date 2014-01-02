@@ -1,0 +1,32 @@
+Here you will find instructions to manage the translation of "Open Education
+Handbook".
+
+Requirements
+------------
+
+- [Translate
+  Toolkit](http://docs.translatehouse.org/projects/translate-toolkit/en/latest/installation.html)
+- [Transifex
+  Client](http://support.transifex.com/customer/portal/articles/995605-installation)
+
+Fetch the translation
+---------------------
+
+~~~
+$ ./fetch.sh https://www.transifex.com username password
+~~~
+
+You should find a directory named `open-education-handbook` with all the data
+from Transifex.
+
+Initial Setup
+-------------
+
+This should be only use in the first setup of the translation.
+
+~~~
+$ ./setup.sh https://www.transifex.com username password
+~~~
+
+The script should download the "Open Education Handbook" from BookType, create
+POT files and upload it to Transifex.
