@@ -5,8 +5,6 @@
 # Usage: setup.sh https://www.transifex.com username password
 #
 
-TXCONFIG=.tx/config
-
 # Get book
 if test ! -e open-education-handbook.zip; then
 wget http://booktype.okfn.org/export/open-education-handbook/export \
@@ -31,8 +29,8 @@ done
 # Create mapping of PO files for Transifex
 for f in $(ls *.pot)
 do
-    tx set --auto-local -r open-education-handbook-portuguese-version.${f/\./} \
-        "<lang>/${f/pot/po}" --source-language en \
+    tx set --auto-local -r open-education-handbook.${f/\./} \
+        "<lang>/${f/pot/po}" --type=PO --source-language en \
         --source-file ${f} --execute
 done
 
