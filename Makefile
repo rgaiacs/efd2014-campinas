@@ -59,7 +59,7 @@ push: setup
 	cd open-education-handbook; tx push -s
 
 pull: open-education-handbook-$(OUTPUTLANG)
-	cd open-education-handbook-$(OUTPU2TLANG); tx set --auto-remote \
+	cd open-education-handbook-$(OUTPUTLANG); tx set --auto-remote \
 	    https://www.transifex.com/projects/p/open-education-handbook
 	cd open-education-handbook-$(OUTPUTLANG); tx pull -l $(OUTPUTLANG)
 
