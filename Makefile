@@ -69,7 +69,7 @@ reassemble: open-education-handbook-$(OUTPUTLANG).zip $(PO)
 	    po2html translations/open-education-handbook.$${f/.html/pot}/$(OUTPUTLANG).po \
 		-t ../open-education-handbook/$${f} -o $${f}; \
 	done
-	zip -f open-education-handbook-$(OUTPUTLANG).zip open-education-handbook-$(OUTPUTLANG)/*
+	zip -jf open-education-handbook-$(OUTPUTLANG).zip open-education-handbook-$(OUTPUTLANG)/*.html
 
 clean:
 	rm -rf open-education-handbook-$(OUTPUTLANG){,.zip}
